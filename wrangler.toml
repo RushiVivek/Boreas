@@ -1,0 +1,16 @@
+name = "boreas"
+main = "src/worker.ts"
+compatibility_date = "2026-06-01"
+
+# Bind r.rushivivek.com after `wrangler deploy` succeeds:
+# routes = [{ pattern = "r.rushivivek.com/*", zone_name = "rushivivek.com" }]
+
+# KV: create with `wrangler kv namespace create LINKS`,
+# then paste the `id` it prints below.
+[[kv_namespaces]]
+binding = "LINKS"
+id = "REPLACE_WITH_KV_ID"
+
+[vars]
+# BOREAS_TOKEN is set as a secret via `wrangler secret put BOREAS_TOKEN`,
+# not in this file. Anything here is public.
